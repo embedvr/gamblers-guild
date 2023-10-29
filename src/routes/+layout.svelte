@@ -4,7 +4,7 @@
 </script>
 
 <main
-    class="bg-black text-[#2CFF00] min-h-screen min-w-screen flex justify-center items-center"
+    class="bg-black text-[#00ff00] min-h-screen min-w-screen flex justify-center items-center"
 >
     <slot />
 </main>
