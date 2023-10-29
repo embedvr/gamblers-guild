@@ -5,8 +5,9 @@
     import { Label } from "$lib/components/ui/label";
 </script>
 
-<div class="flex flex-col lg:gap-8 gap-16 items-center text-center">
+<div class="flex flex-col md:gap-4 gap-16 items-center text-center px-8 py-8">
     <pre
+        tabindex="-1"
         id="output"
         style="white-space: pre;
   font-family: monospace;
@@ -61,22 +62,35 @@
                                                                                         
                                                                                         
 </pre>
-    <pre
-        style="white-space: pre;
-  font-family: monospace;
-  font-size: 6px;
-  line-height: 6px;
-  letter-spacing: unset;
-  transform: unset;
-  overflow-y: hidden;">
-ooooooooooooo oooo                         .oooooo.                                 .o8       oooo                                     .oooooo.                 o8o  oooo        .o8  
-8'   888   `8 `888                        d8P'  `Y8b                               "888       `888                                    d8P'  `Y8b                `"'  `888       "888  
-     888       888 .oo.    .ooooo.       888            .oooo.   ooo. .oo.  .oo.    888oooo.   888   .ooooo.  oooo d8b  .oooo.o      888           oooo  oooo  oooo   888   .oooo888  
-     888       888P"Y88b  d88' `88b      888           `P  )88b  `888P"Y88bP"Y88b   d88' `88b  888  d88' `88b `888""8P d88(  "8      888           `888  `888  `888   888  d88' `888  
-     888       888   888  888ooo888      888     ooooo  .oP"888   888   888   888   888   888  888  888ooo888  888     `"Y88b.       888     ooooo  888   888   888   888  888   888  
-     888       888   888  888    .o      `88.    .88'  d8(  888   888   888   888   888   888  888  888    .o  888     o.  )88b      `88.    .88'   888   888   888   888  888   888  
-    o888o     o888o o888o `Y8bod8P'       `Y8bood8P'   `Y888""8o o888o o888o o888o  `Y8bod8P' o888o `Y8bod8P' d888b    8""888P'       `Y8bood8P'    `V88V"V8P' o888o o888o `Y8bod88P" 
+    <div class="flex flex-col md:flex-row">
+        <pre class="harry" tabindex="-1">
+ooooooooooooo oooo                    
+8'   888   `8 `888                    
+     888       888 .oo.    .ooooo.    
+     888       888P"Y88b  d88' `88b   
+     888       888   888  888ooo888   
+     888       888   888  888    .o   
+    o888o     o888o o888o `Y8bod8P' " 
     </pre>
+        <pre class="harry" tabindex="-1">
+        .oooooo.                                 .o8       oooo                             
+       d8P'  `Y8b                               "888       `888                             
+      888            .oooo.   ooo. .oo.  .oo.    888oooo.   888   .ooooo.  oooo d8b  .oooo.o
+      888           `P  )88b  `888P"Y88bP"Y88b   d88' `88b  888  d88' `88b `888""8P d88(  "8
+      888     ooooo  .oP"888   888   888   888   888   888  888  888ooo888  888     `"Y88b. 
+      `88.    .88'  d8(  888   888   888   888   888   888  888  888    .o  888     o.  )88b
+       `Y8bood8P'   `Y888""8o o888o o888o o888o  `Y8bod8P' o888o `Y8bod8P' d888b    8""888P'
+    </pre>
+        <pre class="harry" tabindex="-1">
+       .oooooo.                 o8o  oooo        .o8
+      d8P'  `Y8b                `"'  `888       "888
+     888           oooo  oooo  oooo   888   .oooo888
+     888           `888  `888  `888   888  d88' `888
+     888     ooooo  888   888   888   888  888   888
+     `88.    .88'   888   888   888   888  888   888
+      `Y8bood8P'    `V88V"V8P' o888o o888o `Y8bod88P
+    </pre>
+    </div>
     <div class="flex flex-col gap-8 items-center">
         <p>Making small bets is hard—don’t do it alone</p>
         <p class="text-gray-300">
@@ -103,12 +117,18 @@ ooooooooooooo oooo                         .oooooo.                             
                 >
                     <div class="grid grid-cols-4 items-center gap-4">
                         <Label class="text-right">Twitter/X</Label>
-                        <Input id="username" class="col-span-3" required />
+                        <Input
+                            id="username"
+                            class="col-span-3"
+                            name="Twitter"
+                            required
+                        />
                     </div>
                     <div class="grid grid-cols-4 items-center gap-4">
                         <Label class="text-right">Email</Label>
                         <Input
                             id="email"
+                            name="Email"
                             class="col-span-3"
                             type="email"
                             required
@@ -121,7 +141,8 @@ ooooooooooooo oooo                         .oooooo.                             
                     />
 
                     <Dialog.Footer>
-                        <input type="submit" value="Sign Up" />
+                        <!-- <input type="submit" value="Sign Up" /> -->
+                        <Button type="submit" value="Sign Up">Submit</Button>
                         <!-- <Button type="submit">Save changes</Button> -->
                     </Dialog.Footer>
                 </form>
@@ -129,7 +150,9 @@ ooooooooooooo oooo                         .oooooo.                             
         </Dialog.Root>
     </div>
 
-    <div class="flex gap-8 justify-center max-w-screen-md items-center">
+    <div
+        class="flex flex-col max-w-sm md:flex-row gap-8 justify-center md:max-w-screen-md items-center"
+    >
         <div class="flex flex-col gap-4 items-center">
             <pre
                 style="white-space: pre;

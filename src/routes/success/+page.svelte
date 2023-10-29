@@ -61,7 +61,7 @@
                                                                                         
                                                                                         
 </pre>
-    <p>Success, we'll be in touch</p>
+    <p>Success—we'll be in touch</p>
 
     <div class="flex flex-col gap-2">
         <p>⚀ ⚁ ⚂ ⚃ ⚄ ⚅</p>
