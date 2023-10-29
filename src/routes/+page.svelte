@@ -1,3 +1,10 @@
+<script>
+    import { Button, buttonVariants } from "$lib/components/ui/button";
+    import * as Dialog from "$lib/components/ui/dialog";
+    import { Input } from "$lib/components/ui/input";
+    import { Label } from "$lib/components/ui/label";
+</script>
+
 <div class="flex flex-col lg:gap-8 gap-16 items-center text-center">
     <pre
         id="output"
@@ -76,6 +83,50 @@ ooooooooooooo oooo                         .oooooo.                             
             A small, private community of founders & indie hackers making small
             bets
         </p>
+
+        <Dialog.Root>
+            <Dialog.Trigger class={buttonVariants({ variant: "outline" })}>
+                Apply
+            </Dialog.Trigger>
+            <Dialog.Content class="sm:max-w-[425px]">
+                <Dialog.Header>
+                    <Dialog.Title>Join The Gamblers Guild</Dialog.Title>
+                    <Dialog.Description>
+                        We're a private but inclusive group. If you'd like to
+                        join, send through your details and we'll reach out.
+                    </Dialog.Description>
+                </Dialog.Header>
+                <form
+                    action="https://api.sheetmonkey.io/form/eKNhm9DsCrqH4RLzp5QZX"
+                    method="post"
+                    class="grid gap-4 py-4"
+                >
+                    <div class="grid grid-cols-4 items-center gap-4">
+                        <Label class="text-right">Twitter/X</Label>
+                        <Input id="username" class="col-span-3" required />
+                    </div>
+                    <div class="grid grid-cols-4 items-center gap-4">
+                        <Label class="text-right">Email</Label>
+                        <Input
+                            id="email"
+                            class="col-span-3"
+                            type="email"
+                            required
+                        />
+                    </div>
+                    <input
+                        type="hidden"
+                        name="Created"
+                        value="x-sheetmonkey-current-date-time"
+                    />
+
+                    <Dialog.Footer>
+                        <input type="submit" value="Sign Up" />
+                        <!-- <Button type="submit">Save changes</Button> -->
+                    </Dialog.Footer>
+                </form>
+            </Dialog.Content>
+        </Dialog.Root>
     </div>
 
     <div class="flex gap-8 justify-center max-w-screen-md items-center">
