@@ -25,6 +25,11 @@
 
     let members = [
         { name: "Akira", twitter: "akirathedev", joinDate: "30/10/2023" },
+        {
+            name: "Charlie Coppinger",
+            twitter: "thecoppinger",
+            joinDate: "30/10/2023",
+        },
     ];
 </script>
 
@@ -37,15 +42,13 @@
                 tabindex="-1"
                 id="output"
                 style="white-space: pre;
-font-family: monospace;
-font-size: 6px;
-line-height: 6px;
-letter-spacing: unset;
-transform: unset;
-overflow-y: hidden;
-
-
-filter:drop-shadow(1px 1px 10px rgba(20, 255,0))
+                    font-family: monospace;
+                    font-size: 6px;
+                    line-height: 6px;
+                    letter-spacing: unset;
+                    transform: unset;
+                    overflow-y: hidden;
+                    filter:drop-shadow(1px 1px 10px rgba(20, 255,0))
 ">   
                                                                                      
                                                                                 
@@ -73,21 +76,10 @@ filter:drop-shadow(1px 1px 10px rgba(20, 255,0))
  .  .   .  #####-................  ......................########     .       
 </pre>
             <pre
-                class="glitch top"
+                class="glitch top harry harry-glowing"
                 aria-hidden="true"
                 tabindex="-1"
-                id="output"
-                style="white-space: pre;
-font-family: monospace;
-font-size: 6px;
-line-height: 6px;
-letter-spacing: unset;
-transform: unset;
-overflow-y: hidden;
-
-
-filter:drop-shadow(1px 1px 10px rgba(20, 255,0))
-">
+                id="output">
   .. .... -######................ ..................... ..#####  .              
       .  ..#######............... .................... ...           -          
  . .    ...-#####-............... ..................  .   . .                   
@@ -413,7 +405,7 @@ ooooooooooooo oooo
             </p>
         </div>
     </div>
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-8">
         <div class="flex flex-col gap-4">
             <p>Founding Members</p>
             <p class="text-gray-300">⚀ ⚁ ⚂ ⚃ ⚄ ⚅</p>
