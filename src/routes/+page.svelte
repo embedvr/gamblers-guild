@@ -3,9 +3,14 @@
     import * as Dialog from "$lib/components/ui/dialog";
     import { Input } from "$lib/components/ui/input";
     import { Label } from "$lib/components/ui/label";
+    import Tablerow from "../lib/components/ui/Tablerow.svelte";
+
+    let members = [
+        { name: "Akira", twitter: "akirathedev", joinDate: "30/10/2023" },
+    ];
 </script>
 
-<div class="flex flex-col gap-4 md:gap-16 items-center text-center px-8 py-8">
+<div class="flex flex-col gap-8 md:gap-16 items-center text-center px-8 py-8">
     <pre
         aria-hidden="true"
         tabindex="-1"
@@ -154,49 +159,77 @@ ooooooooooooo oooo
     </div>
 
     <div
-        class="flex flex-col max-w-sm md:flex-row gap-8 justify-center md:max-w-screen-lg items-center"
+        class="flex flex-col max-w-sm md:flex-row gap-8 justify-center md:max-w-screen-lg items-center mt-8"
     >
         <div class="flex flex-col gap-4 items-center w-full">
             <pre
                 aria-hidden="true"
                 style="white-space: pre;
   font-family: monospace;
-  font-size: 3px;
-  line-height: 3px;
+  font-size: 1px;
+  line-height: 1px;
   letter-spacing: unset;
   transform: unset;
   overflow-y: hidden;">                                                                                          
-             AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                     
-           AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                  
-          AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                 
-        AAAAAAAAA AAAAAAAAA AAAAAAAAA AAAAAAAAAAAAAAAAAAAA                 
-     AAAAAAAAAA     AAAAA     AAAAA     AAAAAAAAAAAAAAAAAA                 
-      AAAAAAAAAA   AAAAAAA   AAAAAAA   AAAAAAAAAAAAAAAAAAA                 
-          AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                 
-           AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                  
-            AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                    
-                                                                           
-                                                                           
-                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA               
-                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA             
-               AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA            
-            AAAAAAAAA   AAAAAAA   AAAAAAA   AAAAAAA   AAAAAAAAA            
-          AAAAAAAAAA     AAAAA     AAAAA     AAAAA     AAAAAAAA            
-            AAAAAAAAA   AAAAAAA   AAAAAAA   AAAAAAA   AAAAAAAAA            
-               AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA            
-                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA             
-                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                
-                                                                           
-                                                                           
-                      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA          
-                     AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA        
-                    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA       
-                AAAAAAAAAA   AAAAAAA   AAAAAAAAAAAAAAAAAAAAAAAAAAAAA       
-               AAAAAAAAAA     AAAAA     AAAAAAAAAAAAAAAAAAAAAAAAAAAA       
-                  AAAAAAAAA AAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA       
-                    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA       
-                     AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA        
-                       AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA           
+             ........................................:.....::::::::::::::::::::::::::::::::::::::::::::::::::::::             
+          ...:;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx++;:           
+         .:;+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX++          
+         ;xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX$$XX$$$$$$$$$$$$$$$$$$$$$$$$$XX          
+         xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$XX         
+         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX$XXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX$X$XX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX$$XX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XXX$XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX$XX$X$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XX$$XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XX$$XXXXXXXXXXXXXX$X+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::+X$$$$$$$$$$$$$$$$$$X         
+         XX$$XXXXXXXXXXXXXX$+....................................................................+$$$$$$$$$$$$$$$$$$X         
+         XX$$XXXXXXXXXXXXX$$x....................................................................+$$$$$$$$$$$$$$$$$$X         
+         XX$$XXXXXXXXXXXXX$$x:..................................................................:+$$$$$$$$$$$$$$$$$$X         
+         XX$$XXXXXXXXXXX$X$$x:..................................................................:+$$$$$$$$$$$$$$$$$$X         
+         XX$$$XXXXXXXXXX$X$$x:..................................................................:x$$$$$$$$$$$$$$$$$$X         
+         XX$$XXXXXXXXXXXX$$X$XXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXX$$$$$$$$$$$$$$$$$$$X         
+         XX$$$XXXXXXXXXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$XX         
+         XX$$$XXXXXXXXXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XX$$$XXXXXXXXXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XX$$XXXXXXXXXXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XX$$XXXXXXXXXXXXXXXXXXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XX$$XXXXXXXXXXXXXXXx:...................................................;$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XX$$XXXXXXXXXXXXX$$x....................................................:X$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XXX$XXXXXXXXXXXXX$$x:...................................................;$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XXXXXXXXXXXXXXXXXX$x:...................................................;$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$XX         
+         XX$$XXXXXXXXXXXXXX$x:...................................................;$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XX$$XXXXXXXXXXXXX$$X+::::::::::::::::::::::::::::::::::::::::::::::::::;x$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$XX         
+         XX$$$XXXXXXXXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$XX         
+         XX$$XXXXXXXXXXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$XX         
+         XX$$$XXXXXXXXXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$XX         
+         XX$$$$XXXXXXXXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$XX         
+         XX$$$X$$$$XXXXXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XX$$$X$XXXXXXXXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$XX         
+         XX$$$$$$$$$XXXXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XX$$$$$X$$XX$$XXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XX$$$$$$$$$$$$XXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$X$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X         
+         XX$$$$$$$$$$$XXXXXXXXXX$$$$$$$$$$$$$$$XXXXXXXXXXXXXXXXXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X          
+         XX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$XX$$XXXXX$XX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$XX          
+          XX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$XXXX$$X$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X           
+            $XX$$$$$$$$$$$$$$$$$$$$$$$$$$$$XXXXXXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$XXXXXXXX$$$$$$$$$$$$$$$$$$$$$X             
+                                 $$$$$$$XXXXXXXXXXX$$$$$$$$$$$$$XX                                                            
+                                 X$$$$$$XXXXXXXXXX$$$$$$$$$$$$XX                                                              
+                                 X$$$$$XXXXXXXXX$$$$$$$$$$$XX                                                                 
+                                 X$$$$$XXXXXXXX$$$$$$$$$$$X                                                                   
+                                  X$$$XXXXXXXX$$$$$$$$$$XX                                                                    
+                                  X$$$XXXXXX$$$$$$$$$$X$                                                                      
+                                  X$$$XXXXXX$$$$$$$$XX                                                                        
+                                  XX$XXXXX$$$$$$$$XX                                                                          
+                                  XXXXXXXX$$$$$$XX                                                                            
+                                 xXXXXXX$$$$$$$XX                                                                             
+                                 xXXXX$$$$$$$XX                                                                               
+                                  XX$$$$$$$XX                                                                                 
+                                   X$$$$$$X                                                                                   
+                                     X$$$                                                                                     
+
 </pre>
             <p>⚀ Forum</p>
             <p class="text-gray-300">
@@ -208,40 +241,58 @@ ooooooooooooo oooo
                 aria-hidden="true"
                 style="white-space: pre;
   font-family: monospace;
-  font-size: 3px;
-  line-height: 3px;
+  font-size: 1px;
+  line-height: 1px;
   letter-spacing: unset;
   transform: unset;
   overflow-y: hidden;">                                                                                          
-                         AAAAA               AAAAA                         
-                  AAAAAAAAAAAAA             AAAAAAAAAAAAA                  
-              AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA              
-            AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA            
-          AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA          
-         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA         
-         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA         
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA        
-       AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA       
-      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA      
-      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA      
-     AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA     
-     AAAAAAAAAAAAAAAAAAAA     AAAAAAAAAAAAAAA     AAAAAAAAAAAAAAAAAAAA     
-    AAAAAAAAAAAAAAAAAAAA       AAAAAAAAAAAAA       AAAAAAAAAAAAAAAAAAAA    
-    AAAAAAAAAAAAAAAAAAA         AAAAAAAAAAA         AAAAAAAAAAAAAAAAAAA    
-    AAAAAAAAAAAAAAAAAAA         AAAAAAAAAAA         AAAAAAAAAAAAAAAAAAA    
-   AAAAAAAAAAAAAAAAAAAA         AAAAAAAAAAA         AAAAAAAAAAAAAAAAAAAA   
-   AAAAAAAAAAAAAAAAAAAA         AAAAAAAAAAA         AAAAAAAAAAAAAAAAAAAA   
-   AAAAAAAAAAAAAAAAAAAAA       AAAAAAAAAAAAA       AAAAAAAAAAAAAAAAAAAAA   
-  AAAAAAAAAAAAAAAAAAAAAAAA   AAAAAAAAAAAAAAAAA   AAAAAAAAAAAAAAAAAAAAAAAA  
-  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA  
-  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA  
-  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA  
-   AAAAAAAAAAAAAAAA       AAAAAAAAAAAAAAAAAAAAAAA       AAAAAAAAAAAAAAAA   
-    AAAAAAAAAAAAAAAA                                   AAAAAAAAAAAAAAAA    
-      AAAAAAAAAAAAAAAA                              AAAAAAAAAAAAAAAAA      
-        AAAAAAAAAAAAAAAAAA                       AAAAAAAAAAAAAAAAA         
-            AAAAAAAAAAAAA                         AAAAAAAAAAAAA            
-                   AAAA                             AAAA                   
+                                      ...........                            ...........                                      
+                                 .................                          ..................                                
+                             ......................                        ......:::::.::::::....                             
+                          ...............::::::::..............................:::::::::::::::::::...                         
+                       .............:::::::::::::::...........................:::::::::::::::::::::::...                      
+                     ..........:::::::::::::::::::::........................::::::;;;;;;;;;;;;;;;:::;;::..                    
+                   .........:::::::::::::::::::::::::::...............:::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;::.                  
+                  ........:::::::::::::;;;;;;;;;;;::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:.                 
+                 ......::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;++++++++++++++++;;;;;;;;;;                 
+                 ...:::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;+++++++++++++++++++++++++;;;;;:                
+                ...:::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;++++++++++++++++++++++++++++++++++;;:               
+               ..::::::;;;;;;;;;;;;;;;;;;;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++;;              
+              ..::::;;;;;;;;;;;;;;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++;;:             
+              ..:::;;;;;;;;;;;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++;;             
+             .::;;;;;;;;;;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++;;            
+            .::;;;;;;;;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++;            
+            .:;;;;;;;;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++xx++xxxxxxxxxx+xxx++++++++++++;           
+           .:;;;;;;;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++xxxxxxxxxxxxxxxxxxxxxxxxx+++++++++++          
+          ..:;;;;;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx++++++++         
+          ::;;;;;+++++++++++++++++++++++++++xxxxxx+x+++++++++++++++++++xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx+x+++++         
+         .:;;;;+++++++++++++++++++++++xxxx++;;;;;+xxxxxxxx+++++++++xxxxxxxxxx++;;;++xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx+++         
+         :;;;;++++++++++++++++++++xxxxxx+:.........:+xxxxxxxxxxxxxxxxxxxxxx;.........:xxxxxxxxxxxxxxxxxxxxxxxxxxxxx+++        
+        .:;;;++++++++++++++++xxxxxxxxxx;.............;xxxxxxxxxxxxxxxxxxx;.............;xXxxxxxxxxxxxxxxxxxxxxxxxxx+++        
+        :;;+++++++++++++xxxxxxxxxxxxxx;...............;xxxxxxxxxxxxxxxxx;...............;xXxxxxxxxxxxxxxxxxxxxxxxxxxxx+       
+        ;;++++++++++xxxxxxxxxxxxxxxxx;.................+xxxxxxxxxxxxxxx+.................+XXxxxxxxxxxxxxxxxxxxxxxxxxxxxx      
+       :;++++++++xxxxxxxxxxxxxxxxxxxx:.................;xXxxxxxxxxxxxxX:.................;XXXxxxxxxxxxxxxxxxxxxxxxxxxxxx      
+      :;++++++xxxxxxxxxxxxxxxxxxxxxXx:.................;xXxxxxxxxxxxxXX:.................;XXXXxxxxxxxxxxxxxxxxxxxxxxxxxx      
+      ;;++++xxxxxxxxxxxxxxxxxxxxxxxXX;.................+XXXxxxxxxxxxxXX;.................;XXXXXXxxxxxxxxxxxxxxxxxxxxxxxx      
+      +++++xxxxxxxxxxxxxxxxxxxxxxxXXXx:...............:xXXXXXxxxxxxXXXXx:...............;x$XXXXXXXXXxxxxxxxxxxxxxxxxxxxxx     
+      ++xxxxxxxxxxxxxxxxxxxxxxxxxXXXXXx:.............:xXXXXXXXXXXXXXXXXXx:.............:+XXXXXXXXXXXXXXXXXXXXXXxxxxxxxxxx     
+     ++xxxxxxxxxxxxxxxxxxxxxXXXXXXXXXXXX;:..........;x$XXXXXXXXXXXXXXXXXXX;...........;xXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXxXX     
+     +xxxxxxxxxxxxXXXXXXXXXXXXXXXXXXXXXXXx+;:::::;+xXXXXXXXXXXXXXXXXXXXXXXXx+;:::::;+xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX     
+     xxxxxxxxxxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx    
+     xxxxxxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx    
+     xxXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    
+     xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    
+     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    
+     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    
+     XXX$$XXXXXXXXXXXXXXXXXXXXX$$$$$XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX$$$$$$$$XXXXXXXXXXXXXXXXXXXX$$XX     
+      XXX$$$$$XXXXXXXXXXXXXXXX$$$$$$$$$$$$XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX$$$$$$$$$$$$$XXXXXXXXXXXXXXX$$$$$$XXX     
+        XXX$$$$$$$$XXXXXXXXXXXXX$$X $$$$$$$$$$$$$$XXXXXXXXXXXXXXXXXXXXXXXXXXX$$$$$$$$$$$$$$X$$$$$XXXXXXXXXXX$$$$$$$$XXX       
+           xX$$$$$$$$$$$XXXXXXXX$$$++     X$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     ;xX$$XXXXXXX$$$$$$$$$$$XXX          
+             XXX$$$$$$$$$$$$XXXXXX$$XXxx+;     XXXXXXXXX$XX$$$$$$$$$$$$XXXXXXXXx    ;+xXXX$$XXXXXX$$$$$$$$$$$$$XXx            
+                XXX$$$$$$$$$$$$XXXXXXX$$Xxx                                        +xX$XXXXXXXXX$$$$$$$$$$$$XXX               
+                    XX$$$$$$$$$$$$XXXXXXXXX                                        X$XXXXXXX$$$$$$$$$$$$XXx                   
+                       XXX$$$$$$$$$$$$$XXX                                          XX$$$$$$$$$$$$$$XXX                       
+                             XXXXXXXXXXX                                              XXXXXXXXXX$X                            
 </pre>
             <p>⚁ Discord</p>
             <p class="text-gray-300">
@@ -253,42 +304,132 @@ ooooooooooooo oooo
                 aria-hidden="true"
                 style="white-space: pre;
   font-family: monospace;
-  font-size: 3px;
-  line-height: 3px;
+  font-size: 1px;
+  line-height: 1px;
   letter-spacing: unset;
   transform: unset;
-  overflow-y: hidden;">                                                                                          
-      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA      
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA        
-  AA      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA      AA  
-  AAAA      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA      AAAA  
-  AAAAAA      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA      AAAAAA  
-  AAAAAAAA      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA      AAAAAAAA  
-  AAAAAAAAAA      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA      AAAAAAAAAA  
-  AAAAAAAAAAAA      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA      AAAAAAAAAAAA  
-  AAAAAAAAAAAAAA      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA      AAAAAAAAAAAAAA  
-  AAAAAAAAAAAAAAAA      AAAAAAAAAAAAAAAAAAAAAAAAAAA      AAAAAAAAAAAAAAAA  
-  AAAAAAAAAAAAAAAAAA      AAAAAAAAAAAAAAAAAAAAAAA      AAAAAAAAAAAAAAAAAA  
-  AAAAAAAAAAAAAAAAAAAA      AAAAAAAAAAAAAAAAAAA      AAAAAAAAAAAAAAAAAAAA  
-  AAAAAAAAAAAAAAAAAAAA        AAAAAAAAAAAAAAA        AAAAAAAAAAAAAAAAAAAA  
-  AAAAAAAAAAAAAAAAAA            AAAAAAAAAAA            AAAAAAAAAAAAAAAAAA  
-  AAAAAAAAAAAAAAAA      AAAA      AAAAAAA      AAAA      AAAAAAAAAAAAAAAA  
-  AAAAAAAAAAAAAA       AAAAAA                 AAAAAA       AAAAAAAAAAAAAA  
-  AAAAAAAAAAAAA      AAAAAAAAAA             AAAAAAAAAA      AAAAAAAAAAAAA  
-  AAAAAAAAAAA      AAAAAAAAAAAAAAAA     AAAAAAAAAAAAAAAA      AAAAAAAAAAA  
-  AAAAAAAAA      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA      AAAAAAAAA  
-  AAAAAAA      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA      AAAAAAA  
-  AAAAA      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA      AAAAA  
-  AAA       AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA       AAA  
-  AA      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA      AA  
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA        
-      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA      
-</pre>
+  overflow-y: hidden;">
+          xxx+xx;...........................................................................................;xXXXXXX          
+        +xxxxxxx+;.........................................................................................;xXXXXXXXXX        
+       xxxxxxxxxxxx+:...................................................................................:+XXXXXXXXXXXX        
+      xxxxxxxxxxxxxxx+;...............................................................................;xXXXXXXXXXXXXXX        
+      xxxxxxxxxxxxxxxxxx+:.........................................................................:+xXXXXXXXXXXXXXXXX        
+      xxxxxxxxxxxxxxxxxxxXx+.....................................................................;XXXXXXXXXXXXXXXXXXXXX       
+       xXxxxxxxxxxxxxxxxxxxXx+:...............................................................:+XXXXXXXXXXXXXXXXXXX$$$$       
+       $$XXxXXXXXXXXXXXXXXXXXXXx;...........................................................;xXXXXXXXXXXXXXXXXXXXXX$$$$       
+       $$$$$XXXXXXXXXXXXXXXXXXXXXXx:......................................................+XXXXXXXXXXXXXXXXXXXXXX$$$$$$       
+       $$$$$$$$XXXXXXXXXXXXXXXXXXXXXx;.................................................;xXXXXXXXXXXXXXXXXXXXXX$$$$$$$$$       
+       $$$$$$$$$$XXXXXXXXXXXXXXXXXXXXXXx;...........................................:+XXXXXXXXXXXXXXXXXXXXX$$$$$$$$$$$$       
+       $$$$$$$$$$$$XXXXXXXXXXXXXXXXXXXXXXX+.......................................;xX$XXXXXXXXXXXXXXXXXX$$$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$$XXXXXXXXXXXXXXXXXXXXXXx;.................................:+XXXXXXXXXXXXXXXXXXX$$$XX$$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$X+xXXXXXXXXXXXXXXXXXXXXXXX+:............................;XXXXXXXXXXXXXXX$$$$$$$XX+;+$$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$x;;+xXXXXXXXXXXXXXXXXXXXXXXXx;.......................:+X$$XXXXXXX$X$$$$$$$$$$Xx+;::+$$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$x:::;;+xXXXXXXXXXXXXXXXXXXXXXXX+:..................;xX$$XX$$$$$$$$$$$$$$$$XX+;;::::+$$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$x:.::::;++XXXXXXXXXXXXXXXXXXXXXXXX;.............:xX$$X$$$$$$$$$$$$$$$$$$Xx;;::::::.+$$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+....::::;;+xXXXXXXXXXXXXXXXXXXXX$$X+:........;xX$$$$$$$$$$$$$$$$$$$$XX+;:::::.....;$$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+.......::::;;+XXX$XX$XXXX$$$$$$$$$$$XX;...:+X$$$$$$$$$$$$$$$$$$$$$Xx;;::::........;$$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+.........::::;;+xX$$$$$$$$$$$$$$$$$$$$$$XX$$$$$$$$$$$$$$$$$$$$$$X+;::::...........;$$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+............::::;;xXX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Xx;;:::..............;$$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+..............::::;;+xX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$X+;::::................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+.................::::;;xX$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Xx;;:::...................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+...................::::;;+xX$$$$$$$$$$$$$$$$$$$$$$$$$$X+;::::.....................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+......................::::;;+X$$$$$$$$$$$$$$$$$$$$$Xx;;:::........................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+........................::::;;+xX$$$$$$$$$$$$$$$$X+;::::..........................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+...........................::::;;+X$$$$$$$$$$$Xx;;:::.............................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+.............................:::::;+x$$$$$$$X+;::::...............................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+................................::::;;xX$Xx;::::..................................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+..................................::;;;;;:::::....................................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+..................................::::............................................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+.................................:................................................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+..................................................................................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+..................................................................................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+..................................................................................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+..................................................................................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+..................................................................................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+..................................................................................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+..................................................................................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+..................................................................................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+..................................................................................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+..................................................................................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+..................................................................................;X$$$$$$$$$$$$$       
+       $$$$$$$$$$$$$$+..................................................................................;X$$$$$$$$$$$$        
+       $$$$$$$$$$$$$$+..................................................................................;X$$$$$$$$$$$$        
+        $$$$$$$$$$$$$+..................................................................................;X$$$$$$$$$$$$        
+         $$$$$$$$$$$$+..................................................................................:X$$$$$$$$$$          
+            </pre>
+
             <p>⚂ Email</p>
             <p class="text-gray-300">
                 A weekly email round-up to highlight achievements
             </p>
         </div>
+    </div>
+    <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4">
+            <p>Members</p>
+            <p class="text-gray-300">⚀ ⚁ ⚂ ⚃ ⚄ ⚅</p>
+        </div>
+        <pre
+            style="    white-space: pre;
+    font-family: monospace;
+    font-size: 3px;
+    line-height: 3px;
+    letter-spacing: unset;
+    transform: unset;
+    overflow-y: hidden;">
+            ;:::;;;+                        +;;::::::::::::::::;;                                                             
+          :::...:::;;++                +++;;::..................:::::;                                                        
+        ::..........::;;;;;;;;;;;;;;;;;+++;:.........................::::;                                                    
+      ::...............::::::::::::;;;;++;:..............................:::;;;;                         +++;;;;;             
+     :.........................::::;;;++;:....................................:::::::;               ++++;;:::...:.           
+    ::..........................::::;++;:............................................:::;+      ++;;;;;;::..........          
+   ::............................::;;+;:...............:::..............................::;;;;;;;;::.................:        
+  ::.............................::;+;...............:;;;::;;;;::...........................:::........................       
+  :..............................:;;:..............::;::.......:;;:::..................................................:      
+ ::.............................::+;..............::;:............::;:::................................................:     
+ ::..............................:+;:............::::................:;;::::............................................::    
+;::..............................:;;;:........:::::....................::;;;:::..........................................::   
+;:::..............................:;+;:::::::;;::.........................:;;;;:::::....................................::::  
+;;::::::............................::;;;;;;;::..............................:;;;;;;:::::...............................::::  
++;;:::::::::....................................................................:;++;;;;;::::.........................::::::; 
+++;;;;;;::::::::::::...............................................................:;+++;;;;::::.....................:::::::: 
+ ++++;;;;;;;;;::::::::................................................................:;++++;;;:::........................::::
+  x+++++++++;;;;;;;;::::.................................................................:;++++;;:::.....................:::;;
+     +xx++++++++++;;;;::::..................................................................:;+++;;;::::..........:::::::;;;; 
+        ++xx++++++++;;;::::....................................................................:;+++;;::::::::::::::::;;++++  
+           xxxxx+++++;;;;::::....................................................................:;+++;;;;::::::::;;+++++     
+             xxxxx+++++;;;:::::.........................................;;;:.......................:;+++++;;;;;;;++++         
+               xxxx+++++;;;;:::::.........................................::::::...................::;++++++++++++            
+                 xxxx+++++;;;;:::::.............................................::::...............::;;++xx+++++x             
+                  xxxx++++++;;;;:::::..............................................:;;;:...........:::;++xxxxxx               
+                    xxxx+++++;;;;::::::...............................................:;;+;;::....::::;;++xxxx                
+                      xxxx+++++;;;;:::::.................................................:;+++;;::::;;;;;++x                  
+                       xxxxx++++;;;;:::::......................::::::......................:;+++++;;;;;;;;++                  
+                         xxxx+;:::;;;;:::::........................:;++;:....................:;+x+++;;;;;;++                  
+                          ++;:.....:;;;:::::..........................:;++;::................::;+++++;;;;;+                   
+                         x++;:......:;+;:::::............................:;+++;:.............::;;++x+++++;                    
+                         xx++;:....::;+;;:::::........::...................:;+++;;:.........::;;++++x+++                      
+                         xxx++;;:::;;+++;;;++;;;::::::;++;;::.................:;;+++;::::::;;;;+++++                          
+                          xxxx++;;;;++x+++++;::...:::..:;;+++;;:.................:;+++++++++++++++++                          
+                          xxxxx++++++xxx++;:........::...:::;;;;;;::................:;++xx++++++++x                           
+                           xxxxx+++xxxx++;:.........:;;;;;:::..::;++;;:.............::;++xxxxxx+                              
+                             xxxxxxxxx+++;::.......:;+;;::::::...::;;++;;;::......::;;+++++                                   
+                                    x++++;;::.....:;+;:......:;++;;;;;::;;++;;;;;;;++++++++                                   
+                                    x++++;;;:::::;++;:.......:;;:.....:::..::;;++++++++++x                                    
+                                    ++++++;;;;;;;+++;........:;:........:.....::;+x+xx                                        
+                                     x++++++;;;+++++;:.......:;.........;::::::;;                                             
+                                        +++++++++++;;:::...:;;;........:++;;;;                                                
+                                               ++++;;::::::;++;:......:;++                                                    
+                                                +++;;:::::;;+++;::::::;;;                                                     
+                                                 x++;;;:;;;;x+++;;;;;;++                                                      
+                                                    ++;;;;    +++++++++                                                       
+        </pre>
+        <ul class="flex flex-col gap-4 max-w-screen-sm justify-between">
+            <Tablerow />
+            {#each members as member}
+                <Tablerow {...member} />
+            {/each}
+        </ul>
     </div>
     <div class="flex flex-col gap-2">
         <p>⚀ ⚁ ⚂ ⚃ ⚄ ⚅</p>
