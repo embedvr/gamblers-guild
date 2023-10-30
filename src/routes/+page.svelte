@@ -15,66 +15,76 @@
 
   let members = [
     { name: "Akira", twitter: "akirathedev", joinDate: "30/10/2023" },
+    {
+      name: "Charlie Coppinger",
+      twitter: "thecoppinger",
+      joinDate: "30/10/2023",
+    },
   ];
 </script>
 
-<div class="flex flex-col gap-8 md:gap-16 items-center text-center px-8 py-8">
-  <Dice />
-  <div class="flex flex-col md:flex-row">
-    <Name />
-  </div>
-  <div class="flex flex-col gap-8 items-center">
-    <p>
-      Building stuff can be lonely, overwhelming and tiring, so we're doing it
-      together.
-    </p>
-    <p class="text-gray-300">
-      A small, private community of founders & indie hackers making small bets
-      and supporting each other.
-    </p>
-    <Dialog.Root>
-      <Dialog.Trigger class={buttonVariants({ variant: "outline" })}>
-        Apply
-      </Dialog.Trigger>
-      <Dialog.Content class="sm:max-w-[425px]">
-        <Dialog.Header>
-          <Dialog.Title>Join The Gamblers Guild</Dialog.Title>
-          <Dialog.Description>
-            We're a private but inclusive group. If you'd like to join, send
-            through your details and we'll reach out.
-          </Dialog.Description>
-        </Dialog.Header>
-        <form
-          action="https://api.sheetmonkey.io/form/eKNhm9DsCrqH4RLzp5QZX"
-          method="post"
-          class="grid gap-4 py-4"
-        >
-          <div class="grid grid-cols-4 items-center gap-4">
-            <Label class="text-right">Twitter/X</Label>
-            <Input id="username" class="col-span-3" name="Twitter" required />
-          </div>
-          <div class="grid grid-cols-4 items-center gap-4">
-            <Label class="text-right">Email</Label>
-            <Input
-              id="email"
-              name="Email"
-              class="col-span-3"
-              type="email"
-              required
+<div class="flex flex-col gap-24 items-center text-center px-8 py-8">
+  <div class="flex flex-col gap-12 items-center">
+    <Dice />
+    <div class="flex flex-col md:flex-row">
+      <Name />
+    </div>
+    <div class="flex flex-col gap-8 items-center">
+      <p>
+        Building stuff can be lonely, overwhelming and tiring, so we're doing it
+        together.
+      </p>
+      <p class="text-gray-300">
+        A small, private community of founders & indie hackers making small bets
+        and supporting each other.
+      </p>
+
+      <Dialog.Root>
+        <Dialog.Trigger class={buttonVariants({ variant: "outline" })}>
+          Apply
+        </Dialog.Trigger>
+        <Dialog.Content class="sm:max-w-[425px]">
+          <Dialog.Header>
+            <Dialog.Title>Join The Gamblers Guild</Dialog.Title>
+            <Dialog.Description>
+              We're a private but inclusive group. If you'd like to join, send
+              through your details and we'll reach out.
+            </Dialog.Description>
+          </Dialog.Header>
+          <form
+            action="https://api.sheetmonkey.io/form/eKNhm9DsCrqH4RLzp5QZX"
+            method="post"
+            class="grid gap-4 py-4"
+          >
+            <div class="grid grid-cols-4 items-center gap-4">
+              <Label class="text-right">Twitter/X</Label>
+              <Input id="username" class="col-span-3" name="Twitter" required />
+            </div>
+            <div class="grid grid-cols-4 items-center gap-4">
+              <Label class="text-right">Email</Label>
+              <Input
+                id="email"
+                name="Email"
+                class="col-span-3"
+                type="email"
+                required
+              />
+            </div>
+            <input
+              type="hidden"
+              name="Created"
+              value="x-sheetmonkey-current-date-time"
             />
-          </div>
-          <input
-            type="hidden"
-            name="Created"
-            value="x-sheetmonkey-current-date-time"
-          />
-          <Dialog.Footer>
-            <Button type="submit" value="Sign Up">Submit</Button>
-          </Dialog.Footer>
-        </form>
-      </Dialog.Content>
-    </Dialog.Root>
+
+            <Dialog.Footer>
+              <Button type="submit" value="Sign Up">Submit</Button>
+            </Dialog.Footer>
+          </form>
+        </Dialog.Content>
+      </Dialog.Root>
+    </div>
   </div>
+
   <div
     class="flex flex-col max-w-sm md:flex-row gap-8 justify-center md:max-w-screen-lg items-center mt-8"
   >
@@ -94,13 +104,14 @@
     </div>
     <div class="flex flex-col gap-4 items-center w-full">
       <Email />
+
       <p>⚂ Email</p>
       <p class="text-gray-300">
         A weekly email round-up to highlight achievements
       </p>
     </div>
   </div>
-  <div class="flex flex-col gap-4">
+  <div class="flex flex-col gap-8">
     <div class="flex flex-col gap-4">
       <p>Founding Members</p>
       <p class="text-gray-300">⚀ ⚁ ⚂ ⚃ ⚄ ⚅</p>
