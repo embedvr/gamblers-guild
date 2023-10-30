@@ -94,10 +94,13 @@ ooooooooooooo oooo
     </pre>
     </div>
     <div class="flex flex-col gap-8 items-center">
-        <p>Making small bets is hard—don’t do it alone</p>
+        <p>
+            Building stuff can be lonely, overwhelming and tiring. You don't
+            have to do it alone.
+        </p>
         <p class="text-gray-300">
             A small, private community of founders & indie hackers making small
-            bets
+            bets and supporting each other.
         </p>
 
         <Dialog.Root>
