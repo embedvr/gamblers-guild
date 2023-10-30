@@ -5,7 +5,7 @@
     import { Label } from "$lib/components/ui/label";
 </script>
 
-<div class="flex flex-col md:gap-4 gap-16 items-center text-center px-8 py-8">
+<div class="flex flex-col gap-4 md:gap-16 items-center text-center px-8 py-8">
     <pre
         tabindex="-1"
         id="output"
@@ -151,9 +151,9 @@ ooooooooooooo oooo
     </div>
 
     <div
-        class="flex flex-col max-w-sm md:flex-row gap-8 justify-center md:max-w-screen-md items-center"
+        class="flex flex-col max-w-sm md:flex-row gap-8 justify-center md:max-w-screen-lg items-center"
     >
-        <div class="flex flex-col gap-4 items-center">
+        <div class="flex flex-col gap-4 items-center w-full">
             <pre
                 style="white-space: pre;
   font-family: monospace;
@@ -199,7 +199,7 @@ ooooooooooooo oooo
                 A message board for weekly check-ins and long-form discussions
             </p>
         </div>
-        <div class="flex flex-col gap-4 items-center">
+        <div class="flex flex-col gap-4 items-center w-full">
             <pre
                 style="white-space: pre;
   font-family: monospace;
@@ -240,10 +240,10 @@ ooooooooooooo oooo
 </pre>
             <p>⚁ Discord</p>
             <p class="text-gray-300">
-                A Discord server for feedback and help requests
+                A Discord server for quick feedback and help requests
             </p>
         </div>
-        <div class="flex flex-col gap-4 items-center">
+        <div class="flex flex-col gap-4 items-center w-full">
             <pre
                 style="white-space: pre;
   font-family: monospace;
