@@ -28,14 +28,15 @@
     ];
 </script>
 
-<div class="flex flex-col gap-8 md:gap-16 items-center text-center px-8 py-8">
-    <div class="dice-wrapper translate-x-20">
-        <pre
-            class="glitch dice top"
-            aria-hidden="true"
-            tabindex="-1"
-            id="output"
-            style="white-space: pre;
+<div class="flex flex-col gap-24 items-center text-center px-8 py-8">
+    <div class="flex flex-col gap-12 items-center">
+        <div class="dice-wrapper translate-x-20">
+            <pre
+                class="glitch dice top"
+                aria-hidden="true"
+                tabindex="-1"
+                id="output"
+                style="white-space: pre;
 font-family: monospace;
 font-size: 6px;
 line-height: 6px;
@@ -71,12 +72,12 @@ filter:drop-shadow(1px 1px 10px rgba(20, 255,0))
 .     . .....###...................  .....................######### .   #        
  .  .   .  #####-................  ......................########     .       
 </pre>
-        <pre
-            class="glitch top"
-            aria-hidden="true"
-            tabindex="-1"
-            id="output"
-            style="white-space: pre;
+            <pre
+                class="glitch top"
+                aria-hidden="true"
+                tabindex="-1"
+                id="output"
+                style="white-space: pre;
 font-family: monospace;
 font-size: 6px;
 line-height: 6px;
@@ -109,10 +110,10 @@ filter:drop-shadow(1px 1px 10px rgba(20, 255,0))
                          #-.-#                                                  
                                                                                 
 </pre>
-    </div>
-    <div class="flex flex-col md:flex-row">
-        <p class="sr-only">The Gamblers Guild</p>
-        <pre aria-hidden="true" class=" harry" tabindex="-1">
+        </div>
+        <div class="flex flex-col md:flex-row">
+            <p class="sr-only">The Gamblers Guild</p>
+            <pre aria-hidden="true" class=" harry" tabindex="-1">
 ooooooooooooo oooo                  
 8'   888   `8 `888                  
      888       888 .oo.    .ooooo.  
@@ -121,7 +122,7 @@ ooooooooooooo oooo
      888       888   888  888    .o 
     o888o     o888o o888o `Y8bod8P' 
     </pre>
-        <pre aria-hidden="true" class=" harry" tabindex="-1">
+            <pre aria-hidden="true" class=" harry" tabindex="-1">
         .oooooo.                                 .o8       oooo                               
        d8P'  `Y8b                               "888       `888                               
       888            .oooo.   ooo. .oo.  .oo.    888oooo.   888   .ooooo.  oooo d8b  .oooo.o  
@@ -130,7 +131,7 @@ ooooooooooooo oooo
       `88.    .88'  d8(  888   888   888   888   888   888  888  888    .o  888     o.  )88b  
        `Y8bood8P'   `Y888""8o o888o o888o o888o  `Y8bod8P' o888o `Y8bod8P' d888b    8""888P'  
     </pre>
-        <pre aria-hidden="true" class=" harry" tabindex="-1">
+            <pre aria-hidden="true" class=" harry" tabindex="-1">
        .oooooo.                 o8o  oooo        .o8
       d8P'  `Y8b                `"'  `888       "888
      888           oooo  oooo  oooo   888   .oooo888
@@ -139,65 +140,68 @@ ooooooooooooo oooo
      `88.    .88'   888   888   888   888  888   888
       `Y8bood8P'    `V88V"V8P' o888o o888o `Y8bod88P
     </pre>
-    </div>
-    <div class="flex flex-col gap-8 items-center">
-        <p>
-            Building stuff can be lonely, overwhelming and tiring, so we're
-            doing it together.
-        </p>
-        <p class="text-gray-300">
-            A small, private community of founders & indie hackers making small
-            bets and supporting each other.
-        </p>
+        </div>
+        <div class="flex flex-col gap-8 items-center">
+            <p>
+                Building stuff can be lonely, overwhelming and tiring, so we're
+                doing it together.
+            </p>
+            <p class="text-gray-300">
+                A small, private community of founders & indie hackers making
+                small bets and supporting each other.
+            </p>
 
-        <Dialog.Root>
-            <Dialog.Trigger class={buttonVariants({ variant: "outline" })}>
-                Apply
-            </Dialog.Trigger>
-            <Dialog.Content class="sm:max-w-[425px]">
-                <Dialog.Header>
-                    <Dialog.Title>Join The Gamblers Guild</Dialog.Title>
-                    <Dialog.Description>
-                        We're a private but inclusive group. If you'd like to
-                        join, send through your details and we'll reach out.
-                    </Dialog.Description>
-                </Dialog.Header>
-                <form
-                    action="https://api.sheetmonkey.io/form/eKNhm9DsCrqH4RLzp5QZX"
-                    method="post"
-                    class="grid gap-4 py-4"
-                >
-                    <div class="grid grid-cols-4 items-center gap-4">
-                        <Label class="text-right">Twitter/X</Label>
-                        <Input
-                            id="username"
-                            class="col-span-3"
-                            name="Twitter"
-                            required
+            <Dialog.Root>
+                <Dialog.Trigger class={buttonVariants({ variant: "outline" })}>
+                    Apply
+                </Dialog.Trigger>
+                <Dialog.Content class="sm:max-w-[425px]">
+                    <Dialog.Header>
+                        <Dialog.Title>Join The Gamblers Guild</Dialog.Title>
+                        <Dialog.Description>
+                            We're a private but inclusive group. If you'd like
+                            to join, send through your details and we'll reach
+                            out.
+                        </Dialog.Description>
+                    </Dialog.Header>
+                    <form
+                        action="https://api.sheetmonkey.io/form/eKNhm9DsCrqH4RLzp5QZX"
+                        method="post"
+                        class="grid gap-4 py-4"
+                    >
+                        <div class="grid grid-cols-4 items-center gap-4">
+                            <Label class="text-right">Twitter/X</Label>
+                            <Input
+                                id="username"
+                                class="col-span-3"
+                                name="Twitter"
+                                required
+                            />
+                        </div>
+                        <div class="grid grid-cols-4 items-center gap-4">
+                            <Label class="text-right">Email</Label>
+                            <Input
+                                id="email"
+                                name="Email"
+                                class="col-span-3"
+                                type="email"
+                                required
+                            />
+                        </div>
+                        <input
+                            type="hidden"
+                            name="Created"
+                            value="x-sheetmonkey-current-date-time"
                         />
-                    </div>
-                    <div class="grid grid-cols-4 items-center gap-4">
-                        <Label class="text-right">Email</Label>
-                        <Input
-                            id="email"
-                            name="Email"
-                            class="col-span-3"
-                            type="email"
-                            required
-                        />
-                    </div>
-                    <input
-                        type="hidden"
-                        name="Created"
-                        value="x-sheetmonkey-current-date-time"
-                    />
 
-                    <Dialog.Footer>
-                        <Button type="submit" value="Sign Up">Submit</Button>
-                    </Dialog.Footer>
-                </form>
-            </Dialog.Content>
-        </Dialog.Root>
+                        <Dialog.Footer>
+                            <Button type="submit" value="Sign Up">Submit</Button
+                            >
+                        </Dialog.Footer>
+                    </form>
+                </Dialog.Content>
+            </Dialog.Root>
+        </div>
     </div>
 
     <div
