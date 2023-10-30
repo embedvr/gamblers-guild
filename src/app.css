@@ -68,4 +68,9 @@ body {
     letter-spacing: unset;
     transform: unset;
     overflow-y: hidden;
+    filter: drop-shadow(1px 1px 10px rgba(20, 255, 0));
+}
+
+.harry-glowing {
+    filter: drop-shadow(1px 1px 10px rgba(20, 255, 0));
 }

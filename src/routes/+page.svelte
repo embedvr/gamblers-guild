@@ -5,69 +5,111 @@
     import { Label } from "$lib/components/ui/label";
     import Tablerow from "../lib/components/ui/Tablerow.svelte";
 
+    import { gsap } from "gsap";
+    import { onMount } from "svelte";
+
+    onMount(() => {
+        //turn up the repeatDelay to make the glitch less frequent
+        var tl = gsap.timeline({ repeat: -1, repeatDelay: 8 });
+        //turn up the skewX to make the glitch more intense
+        tl.to(".glitch", 0.1, { skewX: 30, ease: "power3.inOut" })
+            .to(".glitch", 0.04, { skewX: 0, x: 20, ease: "power2.inOut" })
+            .to(".glitch", 0.04, { opacity: 0 })
+            .to(".glitch", 0.04, { opacity: 1 })
+            .to(".glitch", 0.04, { x: -20 })
+            .to(".glitch", 0.04, { x: 0 })
+            .add("split", 0)
+            .to(".top", 0.5, { x: -60, ease: "power3.inOut" }, "split")
+            .to(".bottom", 0.5, { x: 60, ease: "power3.in" }, "split");
+    });
+
     let members = [
         { name: "Akira", twitter: "akirathedev", joinDate: "30/10/2023" },
     ];
 </script>
 
 <div class="flex flex-col gap-8 md:gap-16 items-center text-center px-8 py-8">
-    <pre
-        aria-hidden="true"
-        tabindex="-1"
-        id="output"
-        style="white-space: pre;
-  font-family: monospace;
-  font-size: 6px;
-  line-height: 6px;
-  letter-spacing: unset;
-  transform: unset;
-  overflow-y: hidden;">                                                                                        
-                                                                                        
-                                      ##+-         -#                                   
-                          ##-                          -#                               
-                  #-                       #########+      #                            
-             #                              .#########        #                         
-           #            ########                                 #                      
-          #..           ##########                                  #                   
-          ......          .######.                                     #                
-          .........                                                       #             
-         #...........                                       ########        +           
-         .. ...........                                     +#########.                 
-         .. .............                                      +######           #      
-        # ....####..........            #########-                                #     
-        # .. ######...........           ##########                           ....      
-        -.. .#######............            .+###.                      .......  ..     
-         .  .-######..............                                .......... ..   #     
-          . ..#####-................                         ...............  .. .      
-       # .. ....+#...................                  ..................  ..    #      
-       # .   . ........................  .        ..................+##### ..           
-       +  . .  .. ...................... .     ....................########  .. +       
-       - ..... .. .......................    ....................-########-             
-       .     . .....###...................  .....................######### .   #        
-         .  .   .  #####-................  ......................########     .         
-          .. .... -######................ ..................... ..#####  .              
-              .  ..#######............... .................... ...           -          
-         . .    ...-#####-............... ..................  .   . .                   
-          . . ..  .. ###+............... ................... ...  .         +           
-       .     . .  .. ................... ................  ..  .                        
-            .   . . .....................................  ..  .                        
-         +   .   .   .. ..............................  ..                +             
-             ..  .. .. . ........................... .. ..  ..                          
-            #     .  .. -####.................... ###-.                  #              
-              ..  .  . .######+.................#######  .              -               
-                  .. . .#######...............######### .                               
-                 #  .  ..######...............########+                                 
-                   + . . .#####..............#########                                  
-                     . . ..................  -######             .#                     
-                       .  . ............. .. ...-.            #                         
-                         . . ...........  ..             .#                             
-                          #.. ........ .. .         .+                                  
-                            # . .....  ..  ...  +                                       
-                               . .. .. .  .#                                            
-                                 #-.-#                                                  
-                                                                                        
-                                                                                        
+    <div class="dice-wrapper translate-x-20">
+        <pre
+            class="glitch dice top"
+            aria-hidden="true"
+            tabindex="-1"
+            id="output"
+            style="white-space: pre;
+font-family: monospace;
+font-size: 6px;
+line-height: 6px;
+letter-spacing: unset;
+transform: unset;
+overflow-y: hidden;
+
+
+filter:drop-shadow(1px 1px 10px rgba(20, 255,0))
+">   
+                                                                                     
+                                                                                
+                              ##+-         -#                                   
+                  ##-                          -#                               
+          #-                       #########+      #                            
+     #                              .#########        #                         
+   #            ########                                 #                      
+  #..           ##########                                  #                   
+  ......          .######.                                     #                
+  .........                                                       #             
+ #...........                                       ########        +           
+ .. ...........                                     +#########.                 
+ .. .............                                      +######           #      
+# ....####..........            #########-                                # 
+ # .. ######...........           ##########                           ....      
+-.. .#######............            .+###.                      .......  ..     
+ .  .-######..............                                .......... ..   #     
+  . ..#####-................                         ...............  .. .      
+# .. ....+#...................                  ..................  ..    #      
+# .   . ........................  .        ..................+##### ..           
++  . .  .. ...................... .     ....................########  .. +       
+- ..... .. .......................    ....................-########-             
+.     . .....###...................  .....................######### .   #        
+ .  .   .  #####-................  ......................########     .       
 </pre>
+        <pre
+            class="glitch top"
+            aria-hidden="true"
+            tabindex="-1"
+            id="output"
+            style="white-space: pre;
+font-family: monospace;
+font-size: 6px;
+line-height: 6px;
+letter-spacing: unset;
+transform: unset;
+overflow-y: hidden;
+
+
+filter:drop-shadow(1px 1px 10px rgba(20, 255,0))
+">
+  .. .... -######................ ..................... ..#####  .              
+      .  ..#######............... .................... ...           -          
+ . .    ...-#####-............... ..................  .   . .                   
+  . . ..  .. ###+............... ................... ...  .         +           
+.     . .  .. ................... ................  ..  .                        
+    .   . . .....................................  ..  .                        
+ +   .   .   .. ..............................  ..                +             
+     ..  .. .. . ........................... .. ..  ..                          
+    #     .  .. -####.................... ###-.                  #              
+      ..  .  . .######+.................#######  .              -               
+          .. . .#######...............######### .                               
+         #  .  ..######...............########+                                 
+           + . . .#####..............#########                                  
+             . . ..................  -######             .#                     
+               .  . ............. .. ...-.            #                         
+                 . . ...........  ..             .#                             
+                  #.. ........ .. .         .+                                  
+                    # . .....  ..  ...  +                                       
+                       . .. .. .  .#                                            
+                         #-.-#                                                  
+                                                                                
+</pre>
+    </div>
     <div class="flex flex-col md:flex-row">
         <p class="sr-only">The Gamblers Guild</p>
         <pre aria-hidden="true" class=" harry" tabindex="-1">
@@ -100,8 +142,8 @@ ooooooooooooo oooo
     </div>
     <div class="flex flex-col gap-8 items-center">
         <p>
-            Building stuff can be lonely, overwhelming and tiring. You don't
-            have to do it alone.
+            Building stuff can be lonely, overwhelming and tiring, so we're
+            doing it together.
         </p>
         <p class="text-gray-300">
             A small, private community of founders & indie hackers making small
@@ -164,6 +206,7 @@ ooooooooooooo oooo
         <div class="flex flex-col gap-4 items-center w-full">
             <pre
                 aria-hidden="true"
+                class="harry-glowing"
                 style="white-space: pre;
   font-family: monospace;
   font-size: 1px;
@@ -239,6 +282,7 @@ ooooooooooooo oooo
         <div class="flex flex-col gap-4 items-center w-full">
             <pre
                 aria-hidden="true"
+                class="harry-glowing"
                 style="white-space: pre;
   font-family: monospace;
   font-size: 1px;
@@ -302,6 +346,7 @@ ooooooooooooo oooo
         <div class="flex flex-col gap-4 items-center w-full">
             <pre
                 aria-hidden="true"
+                class="harry-glowing"
                 style="white-space: pre;
   font-family: monospace;
   font-size: 1px;
@@ -366,7 +411,7 @@ ooooooooooooo oooo
     </div>
     <div class="flex flex-col gap-4">
         <div class="flex flex-col gap-4">
-            <p>Members</p>
+            <p>Founding Members</p>
             <p class="text-gray-300">⚀ ⚁ ⚂ ⚃ ⚄ ⚅</p>
         </div>
         <pre
@@ -376,7 +421,8 @@ ooooooooooooo oooo
     line-height: 3px;
     letter-spacing: unset;
     transform: unset;
-    overflow-y: hidden;">
+    overflow-y: hidden;"
+            class="harry-glowing">
             ;:::;;;+                        +;;::::::::::::::::;;                                                             
           :::...:::;;++                +++;;::..................:::::;                                                        
         ::..........::;;;;;;;;;;;;;;;;;+++;:.........................::::;                                                    
@@ -435,6 +481,15 @@ ooooooooooooo oooo
         <p>⚀ ⚁ ⚂ ⚃ ⚄ ⚅</p>
         <p class="text-gray-300">
             Audentes Fortuna Iuvat // Fortune favors the bold
+        </p>
+    </div>
+    <div class="flex gap-2">
+        <p>Credits:</p>
+        <p class="text-gray-300">
+            Glitch animation by <a
+                href="https://twitter.com/harry_webb98"
+                target="_blank">Harry</a
+            >
         </p>
     </div>
 </div>

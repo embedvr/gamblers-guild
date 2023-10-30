@@ -2,7 +2,7 @@
     let { name, twitter, joinDate } = $$props;
 </script>
 
-<li class="grid grid-cols-1 sm:grid-cols-3 sm:gap-8 grow">
+<li class="grid grid-cols-1 sm:grid-cols-3 sm:gap-16 grow">
     {#if name}
         <p class="text-gray-300">
             {name}
@@ -17,7 +17,7 @@
             target="_blank"
             class="text-gray-300"
         >
-            {twitter}
+            @{twitter} ↗
         </a>
     {:else}
         <p class="hidden sm:block">Twitter</p>
