@@ -36,8 +36,28 @@
             joinDate: "30/10/2023",
         },
         {
-            name: "Kroucher",
+            name: "Daniel Deveney",
             twitter: "danieldeveney",
+            joinDate: "30/10/2023",
+        },
+        {
+            name: "Zach Godsell",
+            twitter: "zach_godsell",
+            joinDate: "30/10/2023",
+        },
+        {
+            name: "Dennis",
+            twitter: "dnbull",
+            joinDate: "30/10/2023",
+        },
+        {
+            name: "mikuemi",
+            twitter: "mikuemi01",
+            joinDate: "30/10/2023",
+        },
+        {
+            name: "Harry Webb",
+            twitter: "harry_webb98",
             joinDate: "30/10/2023",
         },
     ];
