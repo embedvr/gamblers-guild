@@ -33,6 +33,8 @@
     <meta property="twitter:image" content="/meta-cover.jpg" />
 </svelte:head>
 
-<main class="min-h-screen min-w-screen flex justify-center items-center">
+<main
+    class="min-h-screen min-w-screen flex justify-center items-center overflow-x-hidden"
+>
     <slot />
 </main>
