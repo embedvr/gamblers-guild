@@ -26,11 +26,6 @@
             joinDate: "30/10/2023",
         },
         {
-            name: "Kroucher",
-            twitter: "danieldeveney",
-            joinDate: "30/10/2023",
-        },
-        {
             name: "Addison",
             twitter: "uwunetes",
             joinDate: "30/10/2023",
