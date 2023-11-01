@@ -88,22 +88,41 @@ Y88b  d88P Y88..88P Y88b 888 Y8b.
         </p>
         <p>~ James P. Carse</p>
     </div>
-    <p>⚀ ⚁ ⚂ ⚃ ⚄ ⚅</p>
+    <div class="flex flex-col gap-4 items-center">
+        <p>Preamble</p>
+        <p class="text-gray-300">⚀ ⚁ ⚂ ⚃ ⚄ ⚅</p>
+    </div>
     <div class="max-w-lg flex flex-col gap-4">
-        <p>This community can be thought of as an infinite garden.</p>
+        <p>Imagine our community, metaphorically, as an infinite garden.</p>
         <p class="text-white">
             The garden is welcome to anyone who wishes to come and grow
-            something, and contribute to the garden.
+            something and contribute to the garden.
         </p>
         <p class="text-white">
-            The garden doesn't have a size limit, it can be as big or as small
-            as we make it.
+            Every member is both a gardener and a nurturer, invited to sow
+            seeds, cultivate dreams, and reap the fruits of collective effort.
         </p>
         <p class="text-white">
-            Everyone is welcome in the garden, but you must not plant things
-            that are toxic, or put another way, might hurt someone elses ability
-            to grow or enjoy the garden.
+            Our garden doesn't have a size limit, it knows no bounds; it can be
+            as big or as small as we make it.
         </p>
+        <p class="text-white">
+            While the garden's gates are open to all, we have a shared
+            responsibility: to ensure that every plant we introduce enriches the
+            ecosystem.
+        </p>
+        <p class="text-white">
+            We must all refrain from planting anything toxic—anything that might
+            hinder the growth of others plants.
+        </p>
+        <p class="text-white">
+            After all, in this limitless garden, support and mutual respect are
+            the waters that nourish us all.
+        </p>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+        <p>The Code</p>
+        <p class="text-gray-300">⚀ ⚁ ⚂ ⚃ ⚄ ⚅</p>
     </div>
     <ul class="flex flex-col gap-8 max-w-lg">
         {#each coc as code (code.id)}

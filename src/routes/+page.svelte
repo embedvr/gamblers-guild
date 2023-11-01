@@ -186,22 +186,4 @@
             {/each}
         </ul>
     </div>
-    <footer class="flex flex-col gap-16 items-center">
-        <div class="flex flex-col gap-2">
-            <p>⚀ ⚁ ⚂ ⚃ ⚄ ⚅</p>
-            <p class="text-gray-300">
-                Audentes Fortuna Iuvat // Fortune favors the bold
-            </p>
-        </div>
-        <div class="flex gap-2">
-            <p>Credits:</p>
-            <p class="text-gray-300">
-                Glitch animation by <a
-                    href="https://twitter.com/harry_webb98"
-                    target="_blank">Harry</a
-                >
-            </p>
-        </div>
-        <a href="https://twitter.com/gamblersguild" target="_blank">𝕏</a>
-    </footer>
 </div>

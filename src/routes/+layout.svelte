@@ -33,8 +33,46 @@
     <meta property="twitter:image" content="/meta-cover.jpg" />
 </svelte:head>
 
+<header class="w-full flex justify-center py-12">
+    <ul class="flex justify-between max-w-md gap-4 sm:gap-12">
+        <li><a class="underline underline-offset-4" href="/">Home</a></li>
+        <li>
+            <a class="underline underline-offset-4" href="/coc"
+                >Code of Conduct</a
+            >
+        </li>
+        <li>
+            <a
+                class="underline underline-offset-4"
+                href="https://twitter.com/gamblersguild"
+                target="_blank">Twitter</a
+            >
+            ↗
+        </li>
+    </ul>
+</header>
+
 <main
     class="min-h-screen min-w-screen flex justify-center items-center overflow-x-hidden"
 >
     <slot />
 </main>
+
+<footer class="flex flex-col gap-16 items-center justify-center my-8">
+    <div class="flex flex-col gap-2 items-center">
+        <p>⚀ ⚁ ⚂ ⚃ ⚄ ⚅</p>
+        <p class="text-gray-300">
+            Audentes Fortuna Iuvat // Fortune favors the bold
+        </p>
+    </div>
+    <div class="flex gap-2">
+        <p>Credits:</p>
+        <p class="text-gray-300">
+            Glitch animation by <a
+                href="https://twitter.com/harry_webb98"
+                target="_blank">Harry</a
+            >
+        </p>
+    </div>
+    <a href="https://twitter.com/gamblersguild" target="_blank">𝕏</a>
+</footer>
