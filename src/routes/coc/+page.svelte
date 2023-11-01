@@ -83,8 +83,9 @@ Y88b  d88P Y88..88P Y88b 888 Y8b.
     </div>
     <div class="flex flex-col max-w-sm">
         <p class="text-white">
-            “A finite game is played for the purpose of winning. An infinite
-            game for the purpose of continuing the play.”
+            “There are at least two kinds of games: finite and infinite. A
+            finite game is played for the purpose of winning, an infinite game
+            for the purpose of continuing the play.”
         </p>
         <p>~ James P. Carse</p>
     </div>
