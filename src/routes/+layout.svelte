@@ -1,6 +1,7 @@
 <script>
     import "../app.css";
     import "@fontsource-variable/source-code-pro";
+    import { PlausibleAnalytics } from "@accuser/svelte-plausible-analytics";
 </script>
 
 <svelte:head>
@@ -32,6 +33,8 @@
     />
     <meta property="twitter:image" content="/meta-cover.jpg" />
 </svelte:head>
+
+<PlausibleAnalytics />
 
 <header class="w-full flex justify-center py-12">
     <ul class="flex justify-between max-w-md gap-4 sm:gap-12">
