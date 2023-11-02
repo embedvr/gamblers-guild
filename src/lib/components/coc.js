@@ -32,7 +32,7 @@ export const coc = [
         id: 5,
         title: "Constructive Feedback",
         summary:
-            "Well-intentioned feedback is great, personal attacks are un-accpetable.",
+            "Well-intentioned feedback is great, personal attacks are unacceptable.",
         description:
             "If offering feedback or criticism, ensure it's constructive and well-intentioned. Avoid personal attacks, and focus on the content or idea rather than the individual.",
     },
