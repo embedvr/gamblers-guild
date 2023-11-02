@@ -1,7 +1,3 @@
-<svelte:head>
-    <script src="//embed.typeform.com/next/embed.js"></script>
-</svelte:head>
-
 <div
     data-tf-widget="p5LtH4lD"
     data-tf-opacity="100"
