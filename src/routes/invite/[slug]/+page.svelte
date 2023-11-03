@@ -1,3 +1,14 @@
-<script src="//embed.typeform.com/next/embed.js"></script>
+<script lang="ts">
+    let form: HTMLDivElement;
+    import { createWidget } from "@typeform/embed";
+    import "@typeform/embed/build/css/widget.css";
+    import { onMount } from "svelte";
 
-<div data-tf-widget="<form-id>" />
+    onMount(() => {
+        createWidget("p5LtH4lD", {
+            container: form,
+        });
+    });
+</script>
+
+<div bind:this={form} style="width: 100%; height: 500px;" />
