@@ -1,9 +1,13 @@
+<script lang="ts">
+  import { page } from "$app/stores";
+</script>
+
 <div class="flex flex-col gap-4 p-8 overflow-hidden items-center">
-    <p>404</p>
-    <p>Turtle not found</p>
-    <pre class="text-[10%] overflow-hidden w-full" tabindex="-1" aria-hidden>
+  <p>{$page.status}</p>
+  <p>{$page.status === 404 ? "Turtle not found" : $page.error.message}</p>
+  <pre class="text-[10%] overflow-hidden w-full" tabindex="-1" aria-hidden>
         <p
-            class="sr-only">An ASCII image of the Great A’Tuin, a large turtle with four elephants propping up a flat disc-shaped world on its shell, from the Discworld series by Terry Pratchett</p>
+      class="sr-only">An ASCII image of the Great A’Tuin, a large turtle with four elephants propping up a flat disc-shaped world on its shell, from the Discworld series by Terry Pratchett</p>
 
 ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 ██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▓█████████████████████████████████████████████████████████████████████████████████████
