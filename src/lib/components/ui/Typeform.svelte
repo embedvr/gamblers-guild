@@ -1,8 +1,14 @@
-<div
-    data-tf-widget="p5LtH4lD"
-    data-tf-opacity="100"
-    data-tf-iframe-props="title=Gamblers Guild Invite"
-    data-tf-transitive-search-params
-    data-tf-medium="snippet"
-    style="width:100%;height:500px;"
-/>
+<script lang="ts">
+    let form: HTMLDivElement;
+    import { createWidget } from "@typeform/embed";
+    import "@typeform/embed/build/css/widget.css";
+    import { onMount } from "svelte";
+
+    onMount(() => {
+        createWidget("p5LtH4lD", {
+            container: form,
+        });
+    });
+</script>
+
+<div bind:this={form} style="width: 100%; height: 500px;" />

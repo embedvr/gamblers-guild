@@ -20,6 +20,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource-variable/source-code-pro": "^5.0.16",
+		"@typeform/embed": "^4.3.2",
 		"bits-ui": "^0.8.5",
 		"clsx": "^2.0.0",
 		"gsap": "^3.12.2",

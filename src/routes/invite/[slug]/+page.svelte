@@ -1,5 +1,3 @@
-<script>
-    import Typeform from "../../../lib/components/ui/Typeform.svelte";
-</script>
+<script src="//embed.typeform.com/next/embed.js"></script>
 
-<Typeform />
+<div data-tf-widget="<form-id>" />
